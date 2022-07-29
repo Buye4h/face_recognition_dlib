@@ -1,5 +1,10 @@
 # face_recognition_dlib
 
+
+กด q เพื่อออกจากหน้าต่าง
+
+
+
 ติดตั้ง pip ใน terminal
 '"
 pip install cmake
