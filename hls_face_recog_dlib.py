@@ -13,9 +13,12 @@ start_time = time.time()
 
 #******#กด q เพื่อออกจากหน้าต่าง**********
 #รับ video --> ใส่ path, webcam --> ใส่ 0
-# .m3u8          = cant pass
-# HTTP URL m3u8 = pass 
-# .ts           = pass
+
+# FOR TEST HLS INPUT
+# .m3u8 (ใส่path เครื่องตรงๆ)    = cant pass
+# HTTP URL m3u8              = pass 
+# .ts                        = pass
+# url hls ของ เว็บ livepush ติด error code=3221225477 
 VIDEO_URL = "http://cdnapi.kaltura.com/p/1878761/sp/187876100/playManifest/entryId/1_usagz19w/flavorIds/1_5spqkazq,1_nslowvhp,1_boih5aji,1_qahc37ag/format/applehttp/protocol/http/a.m3u8"
 video_capture = cv2.VideoCapture(VIDEO_URL)
 cap = cv2.VideoCapture(VIDEO_URL)
@@ -26,8 +29,6 @@ if (cap.isOpened() == False):
 fps = cap.get(cv2.CAP_PROP_FPS)
 wait_ms = int(1000/fps)
 print('FPS:', fps)
-# test HLS
-# 
 
 
 # รูปภาพที่จะใช้เทียบ------------------------------------------------------
